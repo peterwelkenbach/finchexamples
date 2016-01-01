@@ -23,11 +23,9 @@ object HelloService4 extends App {
     name: String => Ok( Bar2(name))
   }
 
-
   val person2: Endpoint[Person2] = get("person" / string ) {
     name: String => Ok( Person2( name, "Welkenbach"))
   }
-
 
   val api: Service[Request, Response] = (foo2 :+: bar2 :+: person2).toService
 
