@@ -1,0 +1,17 @@
+curl localhost:9001/create
+
+
+// the following UUID was copied from the response of the first request
+// to the "create" endpoint
+// so for a new testrun you need to copy paste it again
+
+curl -d "{\"fk\":\"f797c067-1c63-46a6-9a67-36e35084a465\",
+          \"name\": \"JEANS\",
+		  \"price\": 94.5}"
+		  localhost:9001/add
+
+curl localhost:9001/show/f797c067-1c63-46a6-9a67-36e35084a465
+
+
+
+
